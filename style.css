@@ -1,0 +1,333 @@
+/* Configuraciones base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #1a2235;
+    background-image: 
+        radial-gradient(circle at 15% 40%, rgba(200, 90, 40, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 85% 60%, rgba(15, 45, 100, 0.5) 0%, transparent 50%),
+        linear-gradient(135deg, #252024 0%, #1c263d 50%, #0e1e38 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ================= Barra de Navegación ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%; /* Márgenes laterales ajustados */
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Propiedades añadidas para que logo001.jpg se ajuste a la barra */
+.logo-img {
+    height: 32px; /* Ajusta este número si quieres que el logo se vea más grande o pequeño */
+    width: auto;
+    display: block;
+}
+
+/* Contenedor que agrupa el menú y el botón */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* Distancia entre las letras del menú y el botón naranja */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px; /* Distancia entre las palabras del menú */
+}
+
+.nav-links li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    font-size: 12.5px; /* Letra del menú más pequeña */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffffff;
+}
+
+.nav-links li a.active-link {
+    color: #FF7913; /* Color naranja original */
+}
+
+.btn-nav-solid {
+    background-color: #FF7913;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 11px; /* Letra del botón más pequeña */
+    font-weight: 800;
+    padding: 10px 22px;
+    border-radius: 6px;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.btn-nav-solid:hover {
+    background-color: #e66600;
+}
+
+/* ================= Sección Principal (Hero) ================= */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.hero-image-container {
+    width: 100%;
+    max-width: 850px; /* Tamaño proporcionado a la pantalla */
+    margin-bottom: 45px; /* Separación con el texto */
+}
+
+.devices-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text-content {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TAMAÑOS DE TEXTO GIGANTES AJUSTADOS A LA ORIGINAL */
+.hero-text-content h2 {
+    font-size: 64px; /* Aumentado masivamente */
+    font-weight: 800;
+    margin-bottom: -5px; /* Junta las dos líneas de título */
+    color: #ffffff;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.hero-text-content h1 {
+    font-size: 78px; /* Aumentado masivamente */
+    font-weight: 800;
+    color: #FF7913; 
+    margin-bottom: 25px;
+    letter-spacing: -2.5px;
+    line-height: 1.1;
+}
+
+.hero-text-content p {
+    font-size: 15px; /* Letra un poco más pequeña */
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 720px; /* Ancho ajustado para que el texto baje igual */
+}
+
+/* Botón central */
+.btn-main-orange {
+    background-color: #FF7913;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 45px;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 6px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.btn-main-orange:hover {
+    background-color: #e66600;
+}
+
+.subtext {
+    font-size: 13px;
+    color: #a3a3a3;
+    margin-bottom: 40px;
+}
+
+/* Flecha */
+.scroll-down {
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a3a3a3;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.scroll-down:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* ================= Sección ¿Qué es MaxPlayer? ================= */
+.about-section {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 100px 6% 0 6%; /* Espaciado superior y lateral */
+    position: relative;
+    /* La franja azul oscuro que aparece al final de la imagen */
+    border-bottom: 45px solid #1a3c61; 
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding-bottom: 80px;
+}
+
+/* Columna Izquierda */
+.about-text {
+    flex: 1;
+    max-width: 550px;
+}
+
+.about-text h2 {
+    font-size: 52px;
+    font-weight: 800;
+    color: #111111; /* Negro casi puro */
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.about-text .highlight-text {
+    font-size: 21px;
+    font-weight: 500;
+    color: #FF7913; /* Naranja corporativo */
+    line-height: 1.4;
+    margin-bottom: 35px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #4a4a4a; /* Gris oscuro para lectura cómoda */
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Columna Derecha */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    /* Agrega una sombra sutil si la imagen no la tiene integrada */
+    filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.15));
+}
+/* ================= Banner de Dispositivos (Marquesina) ================= */
+.devices-banner {
+    /* Color base azul oscuro con degradado y resplandor naranja central */
+    background-color: #123359;
+    background-image: 
+        radial-gradient(circle at 50% 30%, rgba(255, 121, 19, 0.15) 0%, transparent 45%),
+        linear-gradient(to bottom, #19467d 0%, #0c2340 100%);
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden; 
+}
+
+.devices-banner-text {
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.devices-banner-text h2 {
+    color: #FF7913; /* Naranja corporativo */
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.devices-banner-text p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contenedor que oculta el desbordamiento de la marquesina */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* Difumina los bordes izquierdo y derecho para un efecto de entrada/salida suave */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* La pista que contiene todos los logos y ejecuta la animación */
+.marquee-track {
+    display: flex;
+    align-items: center;
+    width: max-content; /* Se estira según el contenido */
+    gap: 80px; /* Separación amplia entre marcas */
+    animation: scroll-left 35s linear infinite; /* Movimiento constante y perpetuo */
+    padding-left: 40px;
+}
+
+/* Animación: Mueve la pista exactamente el 50% de su ancho total (1 grupo de logos) */
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+/* Diseño unificado para los logos construidos con código (Aumentado 30%) */
+.marquee-logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #ffffff;
+    font-size: 29px; /* Antes 22px */
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0.95;
+    letter-spacing: -0.5px;
+}
+
+.marquee-logo i {
+    font-size: 34px; /* Antes 26px */
+}

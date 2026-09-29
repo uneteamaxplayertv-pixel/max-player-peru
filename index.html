@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Player TV</title>
+    <!-- Tipografía Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header class="navbar">
+        <!-- Logo en imagen -->
+        <div class="logo">
+            <img src="logo001.jpg" alt="Max Player TV" class="logo-img">
+        </div>
+        
+        <!-- Nuevo contenedor para agrupar menú y botón a la derecha -->
+        <div class="nav-right">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active-link">Comenzar</a></li>
+                    <li><a href="#">Precio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Descargar <i class="fa-solid fa-chevron-down" style="font-size: 9px; margin-left: 2px;"></i></a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-nav-solid">PRUÉBALO GRATIS DURANTE 4 HORAS</a>
+        </div>
+    </header>
+
+    <!-- Sección Principal (Hero) -->
+    <section class="hero" id="inicio">
+        
+        <!-- Imagen -->
+        <div class="hero-image-container">
+            <img src="foto001.jpg" alt="Dispositivos Max Player" class="devices-img">
+        </div>
+        
+        <!-- Contenedor de Textos -->
+        <div class="hero-text-content">
+            <h2>Tu contenido favorito</h2>
+            <h1>En cada pantalla</h1>
+            <p>Accede a tus películas, series y canales de televisión favoritos en un solo lugar. Mantén tu historial sincronizado y retoma donde lo dejaste en cualquier dispositivo con MaxPlayer.</p>
+            
+            <a href="#" class="btn-main-orange">COMIENCE GRATIS</a>
+            <span class="subtext">¡Prueba gratuita de 4 horas!</span>
+        </div>
+
+        <!-- Flecha -->
+        <div class="scroll-down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+    </section>
+
+    <!-- Sección ¿Qué es MaxPlayer? -->
+    <section class="about-section" id="recursos">
+        <div class="about-container">
+            <!-- Columna Izquierda: Texto -->
+            <div class="about-text">
+                <h2>¿Qué es MaxPlayer?</h2>
+                <h3 class="highlight-text">Un reproductor de IPTV de última generación diseñado para ofrecer velocidad y sencillez en cualquier pantalla.</h3>
+                
+                <p>Cubrimos todas las plataformas y, con los mismos datos de acceso, puedes acceder hasta a 3 dispositivos simultáneamente.</p>
+                <p>También tienes la opción de crear subusuarios, donde cada miembro de la familia puede tener su propio perfil personalizado.</p>
+                <p>MaxPlayer es sencillo, rápido y seguro, y tu perfil se sincroniza en todas las plataformas que ofrecemos.</p>
+            </div>
+            
+            <!-- Columna Derecha: Imagen del TV -->
+            <div class="about-image">
+                <!-- Asegúrate de tener esta imagen en tu carpeta -->
+                <img src="tv.png" alt="MaxPlayer en Smart TV">
+            </div>
+        </div>
+    </section>
+
+<!-- Sección Dispositivos (Marquesina Infinita) -->
+    <section class="devices-banner">
+        <div class="devices-banner-text">
+            <h2>Disponible en todos los dispositivos<br>modernos.</h2>
+            <p>Un reproductor, múltiples plataformas. MaxPlayer se ejecuta de forma nativa en todos los principales<br>dispositivos y sistemas operativos.</p>
+        </div>
+
+        <div class="marquee-container">
+     <div class="marquee-track">
+                <!-- GRUPO 1 DE LOGOS -->
+                <div class="marquee-logo"><i class="fa-brands fa-android"></i> androidtv</div>
+                <div class="marquee-logo"><i class="fa-solid fa-tv" style="font-size: 26px;"></i> LG</div>
+                <div class="marquee-logo" style="text-align:left; line-height:1.1;">
+                    <span style="font-size:14px; font-weight:400;">Samsung</span><br>SMART TV
+                </div>
+                <div class="marquee-logo" style="border: 1.5px solid rgba(255,255,255,0.4); padding: 5px 13px; border-radius: 5px;">
+                    <i class="fa-brands fa-windows" style="font-size:23px;"></i> 
+                    <div style="text-align:left; line-height:1; font-size:18px; margin-left:8px;">
+                        <span style="font-size:12px; font-weight:400;">Get it from</span><br>Microsoft
+                    </div>
+                </div>
+                <div class="marquee-logo"><i class="fa-brands fa-apple"></i> App Store</div>
+                <div class="marquee-logo"><i class="fa-brands fa-google-play"></i> Google Play</div>
+                <div class="marquee-logo">
+                    <span style="border-radius:50%; border:2.5px solid white; padding:3px 8px; font-size:18px; margin-right:5px;">im</span> infomir
+                </div>
+                <div class="marquee-logo"><i class="fa-brands fa-apple"></i> tv</div>
+                <div class="marquee-logo"><i class="fa-brands fa-amazon"></i> amazon fireTV</div>
+
+                <!-- GRUPO 2 DE LOGOS (Duplicado exacto para crear el bucle infinito) -->
+                <div class="marquee-logo"><i class="fa-brands fa-android"></i> androidtv</div>
+                <div class="marquee-logo"><i class="fa-solid fa-tv" style="font-size: 26px;"></i> LG</div>
+                <div class="marquee-logo" style="text-align:left; line-height:1.1;">
+                    <span style="font-size:14px; font-weight:400;">Samsung</span><br>SMART TV
+                </div>
+                <div class="marquee-logo" style="border: 1.5px solid rgba(255,255,255,0.4); padding: 5px 13px; border-radius: 5px;">
+                    <i class="fa-brands fa-windows" style="font-size:23px;"></i> 
+                    <div style="text-align:left; line-height:1; font-size:18px; margin-left:8px;">
+                        <span style="font-size:12px; font-weight:400;">Get it from</span><br>Microsoft
+                    </div>
+                </div>
+                <div class="marquee-logo"><i class="fa-brands fa-apple"></i> App Store</div>
+                <div class="marquee-logo"><i class="fa-brands fa-google-play"></i> Google Play</div>
+                <div class="marquee-logo">
+                    <span style="border-radius:50%; border:2.5px solid white; padding:3px 8px; font-size:18px; margin-right:5px;">im</span> infomir
+                </div>
+                <div class="marquee-logo"><i class="fa-brands fa-apple"></i> tv</div>
+                <div class="marquee-logo"><i class="fa-brands fa-amazon"></i> amazon fireTV</div>
+            </div>
+            
+        </div>
+    </section>
+
+</body>
+</html>
