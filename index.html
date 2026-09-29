@@ -8,6 +8,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'TU_ID_DE_PIXEL_AQUI'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=TU_ID_DE_PIXEL_AQUI&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
 </head>
 <body>
 
@@ -414,29 +432,40 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Script para hacer funcionales los botones de WhatsApp -->
+   <!-- Script para WhatsApp y rastreo de Píxel -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Número de WhatsApp configurado
             const phone = "51939642789";
             const message = "Hola,%20quiero%20solicitar%20mi%20prueba%20gratis%20de%206%20horas%20de%20MaxPlayer";
             const waLink = `https://wa.me/${phone}?text=${message}`;
 
-            // Seleccionar todos los botones o enlaces principales que correspondan a llamadas a la acción
             const ctaButtons = document.querySelectorAll('a, button');
             
             ctaButtons.forEach(el => {
                 const text = el.textContent.trim().toLowerCase();
-                // Si el botón contiene frases de llamada a la acción, redirigirlo a WhatsApp
-                if (text.includes("pruébalo gratis") || text.includes("comenzar") || text.includes("prueba gratis") || text.includes("prueba de 6 horas")) {
-                    el.href = waLink;
-                    el.setAttribute("target", "_blank");
-                    el.setAttribute("rel", "noopener noreferrer");
+                
+                // Si es un botón de prueba gratis o el botón flotante de WhatsApp
+                if (text.includes("pruébalo gratis") || text.includes("comenzar") || text.includes("prueba gratis") || text.includes("prueba de 6 horas") || el.classList.contains('whatsapp-float')) {
+                    
+                    // Asignar el enlace de WhatsApp
+                    if (el.tagName.toLowerCase() === 'a') {
+                        el.href = waLink;
+                        el.setAttribute("target", "_blank");
+                        el.setAttribute("rel", "noopener noreferrer");
+                    }
+
+                    // Enviar el evento a Meta Pixel al hacer clic
+                    el.addEventListener('click', function() {
+                        if (typeof fbq === 'function') {
+                            fbq('track', 'Contact');
+                        }
+                    });
                 }
             });
         });
     </script>
     
+
 
 </body>
 </html>
