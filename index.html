@@ -62,7 +62,7 @@
         <div class="about-container">
             <!-- Columna Izquierda: Texto -->
             <div class="about-text">
-                <h2>¿Qué es MaxPlayer?</h2>
+                <h2>¿Qué es MaxPlayerTv?</h2>
                 <h3 class="highlight-text">Un reproductor de IPTV de última generación diseñado para ofrecer velocidad y sencillez en cualquier pantalla.</h3>
                 
                 <p>Cubrimos todas las plataformas y, con los mismos datos de acceso, puedes acceder hasta a 3 dispositivos simultáneamente.</p>
@@ -82,7 +82,7 @@
     <section class="devices-banner">
         <div class="devices-banner-text">
             <h2>Disponible en todos los dispositivos<br>modernos.</h2>
-            <p>Un reproductor, múltiples plataformas. MaxPlayer se ejecuta de forma nativa en todos los principales<br>dispositivos y sistemas operativos.</p>
+            <p>Un reproductor, múltiples plataformas. MaxPlayerTv se ejecuta de forma nativa en todos los principales<br>dispositivos y sistemas operativos.</p>
         </div>
 
         <div class="marquee-container">
@@ -185,7 +185,7 @@
                 </div>
 
                 <!-- Párrafo de descargo de responsabilidad -->
-                <p class="disclaimer">Al adquirir una suscripción mensual al contenido de entretenimiento, podrá usar 3 pantallas simultáneamente y disfrutar de esta potente aplicación MaxPlayer en su teléfono inteligente, televisor inteligente y computadora al mismo tiempo.</p>
+                <p class="disclaimer">Al adquirir una suscripción mensual al contenido de entretenimiento, podrá usar 5 pantallas simultáneamente y disfrutar de esta potente aplicación MaxPlayer en su teléfono inteligente, televisor inteligente y computadora al mismo tiempo.</p>
             </div>
             
             <!-- Columna Derecha: Imagen del Teléfono -->
@@ -233,7 +233,178 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Sección Instrucciones y Noticias -->
+    <section class="news-section">
+        <div class="news-container">
+            <h2>Instrucciones y últimas noticias</h2>
+            <p>Instrucciones, últimas noticias y actualizaciones. Mantente al día de todo en un solo<br>lugar y mantente informado.</p>
+        </div>
+    </section>
+
+    <!-- Sección Preguntas Frecuentes -->
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <h2>Preguntas Frecuentes sobre<br>MaxPlayer</h2>
+            
+            <div class="faq-accordion">
+                <!-- Pregunta 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué dispositivos son compatibles?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>MaxPlayerTv es totalmente compatible con Smart TVs (Android TV, Samsung, LG), dispositivos móviles (Android e iOS), TV Boxes, Amazon Fire Stick y ordenadores (PC/Mac).</p>
+                    </div>
+                </div>
+                
+                <!-- Pregunta 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cómo funciona el pago?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El servicio es prepago mensual. Puedes realizar tu pago de forma rápida y segura a través de Yape, Plin o transferencia bancaria directa. Una vez confirmado, tu cuenta se activa al instante.</p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿La prueba gratis requiere tarjeta de crédito?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, en absoluto. Para acceder a tu demo gratuita de 4 horas solo necesitas contactarnos directamente por WhatsApp. No te solicitaremos ningún dato bancario.</p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué calidad de streaming ofrecen?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ofrecemos canales, series y películas en calidades SD, HD, Full HD y 4K. La resolución se adapta automáticamente a la velocidad de tu conexión a internet para evitar interrupciones.</p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cuántos dispositivos puedo usar simultáneamente?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Con nuestra tarifa única de S/ 15.00 al mes, puedes conectar tu cuenta y reproducir contenido en hasta 5 dispositivos (pantallas) de forma simultánea, sin restricciones de red.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script para animar el acordeón de Preguntas Frecuentes -->
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Cerrar las otras preguntas al abrir una nueva
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Abrir/Cerrar la pregunta actual
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+<!-- Pie de página (Footer) -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Columna 1: Logo y descripción -->
+            <div class="footer-col footer-brand-col">
+                <div class="footer-logo">
+                    <img src="logo001.jpg" alt="MaxPlayer Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">maxplayertv</span>
+                </div>
+                <p class="footer-desc">MaxPlayerTv es un reproductor IPTV moderno que reúne TV en directo, películas, series y contenido en diferido en una aplicación rápida y con un diseño cuidado — perfectamente sincronizada en todos tus dispositivos y plataformas.</p>
+                
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Correo electrónico"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Plataformas -->
+            <div class="footer-col">
+                <h3>Plataformas</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Amazon Fire TV</a></li>
+                    <li><a href="#">Android TV</a></li>
+                    <li><a href="#">LG WebOS</a></li>
+                    <li><a href="#">Samsung Tizen</a></li>
+                    <li><a href="#">iOS</a></li>
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">Apple TV</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Producto -->
+            <div class="footer-col">
+                <h3>Producto</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Funciones</a></li>
+                    <li><a href="#planes">Precios</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Playlist Checker</a></li>
+                    <li><a href="#">Affiliate</a></li>
+                    <li><a href="#">Prueba gratis 4 horas</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Obtener la app -->
+            <div class="footer-col">
+                <h3>Obtener la app</h3>
+                <p class="footer-app-desc">Descarga la app móvil de MaxPlayerTv para Android e iOS y empieza a ver en minutos.</p>
+                
+                <div class="footer-app-badges">
+                    <a href="#" class="app-badge-btn">
+                        <i class="fa-brands fa-apple"></i>
+                        <div class="badge-txt">
+                            <span class="b-small">Available on the</span>
+                            <span class="b-big">App Store</span>
+                        </div>
+                    </a>
+                    <a href="#" class="app-badge-btn">
+                        <i class="fa-brands fa-google-play"></i>
+                        <div class="badge-txt">
+                            <span class="b-small">ANDROID APP ON</span>
+                            <span class="b-big">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea inferior divisoria -->
+        <div class="footer-bottom">
+            <p>© 2017–2026 | MaxPlayerTv™ is a trademark of MaxPlayerPeru| Todos los derechos reservados.</p>
+            <div class="footer-legal-links">
+                <a href="#">Términos del Servicio</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
 
 </body>
 </html>

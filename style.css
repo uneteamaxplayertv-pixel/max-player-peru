@@ -717,3 +717,318 @@ body {
         width: 100%;
     }
 }
+/* ================= Sección Instrucciones y Noticias ================= */
+.news-section {
+    background-color: #ffffff;
+    padding: 80px 6%;
+    text-align: center;
+}
+
+.news-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-container h2 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.news-container p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* ================= Sección Preguntas Frecuentes ================= */
+.faq-section {
+    background-color: #0b1120; /* Fondo azul muy oscuro */
+    padding: 90px 6%;
+    color: #ffffff;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-container h2 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cajas de cada pregunta */
+.faq-item {
+    background-color: #1a1f2e; /* Gris azulado para la tarjeta */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 22px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #232a3d;
+}
+
+.faq-question i {
+    font-size: 14px;
+    color: #a0aec0; /* Flecha gris clara */
+    transition: transform 0.4s ease;
+}
+
+/* Animación de giro para la flecha al estar activo */
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+/* Estilos de la respuesta oculta por defecto */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background-color: #1a1f2e;
+    padding: 0 25px;
+}
+
+.faq-answer p {
+    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    padding-bottom: 22px;
+    margin: 0;
+}
+
+/* Clase para revelar el texto al hacer clic */
+.faq-item.active .faq-answer {
+    max-height: 300px; 
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .news-container p br, 
+    .faq-container h2 br {
+        display: none; /* Evita cortes extraños en pantallas pequeñas */
+    }
+    .faq-question {
+        padding: 18px 20px;
+        font-size: 15px;
+        gap: 15px;
+    }
+}
+
+/* ================= Pie de página (Footer) ================= */
+.site-footer {
+    background-color: #11151f; /* Fondo azul oscuro profundo */
+    color: #94a3b8; /* Texto secundario gris claro */
+    padding: 80px 6% 30px 6%;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Columna de Marca y Redes */
+.footer-brand-col .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.footer-logo-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.footer-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #8a99ad;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.footer-socials a:hover {
+    background-color: #FF7913;
+}
+
+/* Enlaces de las columnas */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links li a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 14px;
+}
+
+.footer-links li a:hover {
+    color: #ffffff;
+}
+
+/* Columna de la App */
+.footer-app-desc {
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #8a99ad;
+}
+
+.footer-app-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-badge-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    max-width: 180px;
+    transition: background-color 0.3s;
+}
+
+.app-badge-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.app-badge-btn i {
+    font-size: 20px;
+}
+
+.badge-txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-txt .b-small {
+    font-size: 7px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.badge-txt .b-big {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Sección inferior de Copyright */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+    color: #64748b;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal-links a {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-legal-links a:hover {
+    color: #ffffff;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
