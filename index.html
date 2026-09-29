@@ -7,7 +7,7 @@
     <!-- Tipografía Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -405,6 +405,38 @@
         </div>
     </footer>
 
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/51939642789?text=Hola,%20quiero%20más%20información%20sobre%20MaxPlayer%20y%20la%20prueba%20gratis" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Script para hacer funcionales los botones de WhatsApp -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Número de WhatsApp configurado
+            const phone = "51939642789";
+            const message = "Hola,%20quiero%20solicitar%20mi%20prueba%20gratis%20de%206%20horas%20de%20MaxPlayer";
+            const waLink = `https://wa.me/${phone}?text=${message}`;
+
+            // Seleccionar todos los botones o enlaces principales que correspondan a llamadas a la acción
+            const ctaButtons = document.querySelectorAll('a, button');
+            
+            ctaButtons.forEach(el => {
+                const text = el.textContent.trim().toLowerCase();
+                // Si el botón contiene frases de llamada a la acción, redirigirlo a WhatsApp
+                if (text.includes("pruébalo gratis") || text.includes("comenzar") || text.includes("prueba gratis") || text.includes("prueba de 6 horas")) {
+                    el.href = waLink;
+                    el.setAttribute("target", "_blank");
+                    el.setAttribute("rel", "noopener noreferrer");
+                }
+            });
+        });
+    </script>
+    
 
 </body>
 </html>
